@@ -25,14 +25,14 @@ function App() {
         const updatedNumbers =
           randomNumber !== null ? [...prevNumbers, randomNumber] : prevNumbers;
 
-          if (updatedNumbers.length >= 75) {
+          if (updatedNumbers.length >= 100) {
             setRandomNumber(null); // 新しい数字はセットしない
             return updatedNumbers;
           }
 
         let number;
         do {
-          number = Math.floor(Math.random() * 75) + 1;
+          number = Math.floor(Math.random() * 100) + 1;
         } while (updatedNumbers.includes(number)); // 重複していたら再生成
 
         setRandomNumber(number); // 新しい数字をセット
